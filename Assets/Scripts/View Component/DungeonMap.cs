@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controller;
+using Enums;
 using GoRogue;
 using GoRogue.GameFramework;
 using GoRogue.MapGeneration;
@@ -65,7 +66,7 @@ public class DungeonMap : MonoBehaviour
 
     public void UpdatePlayerFOV()
     {
-        Data.CalculateFOV(Player.Position, Player.Awareness);
+        Data.CalculateFOV(Player.Position, Player.Stats[StatTypes.Awareness]);
         FOVWasUpdated?.Invoke(this, EventArgs.Empty);
     }
 }

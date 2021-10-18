@@ -5,12 +5,14 @@ public abstract class State : MonoBehaviour
 {
 	public virtual void Enter ()
 	{
+		enabled = true;
 		AddListeners();
 	}
 	
 	public virtual void Exit ()
 	{
 		RemoveListeners();
+		enabled = false;
 	}
 
 	protected virtual void OnDestroy ()

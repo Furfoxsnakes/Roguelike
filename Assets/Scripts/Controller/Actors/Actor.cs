@@ -6,6 +6,7 @@ using DG.Tweening;
 using GoRogue;
 using GoRogue.GameFramework;
 using UnityEngine;
+using View_Component;
 using GameObject = UnityEngine.GameObject;
 using Random = UnityEngine.Random;
 
@@ -14,13 +15,16 @@ public class Actor : MonoBehaviour, IGameObject
     private IGameObject _go;
     
     [SerializeField] private GameObject _visuals;
-
     [SerializeField] private bool _isWalkable = false;
     [SerializeField] private bool _isTransparent = true;
-
     [SerializeField] private DamageNumber _damageNumberPrefab;
 
+    public bool NeedsUserInput => _needsUserInput;
+    [SerializeField] private bool _needsUserInput;
+
+    public string Name;
     public int Awareness = 4;
+    public Stats Stats;
 
     public Vector3Int Vector3Pos => new Vector3Int(_go.Position.X, _go.Position.Y, 0);
 
@@ -44,19 +48,10 @@ public class Actor : MonoBehaviour, IGameObject
     public virtual bool TryMove(Coord delta)
     {
         var newPos = _go.Position + delta;
-        if (CurrentMap.WalkabilityView[newPos])
-        {
-            _go.Position = newPos;
-            return true;
-        }
 
-        var target = CurrentMap.GetEntity<Actor>(newPos);
+        if (!CurrentMap.WalkabilityView[newPos]) return false;
         
-        
-        
-        if (target == null) return false;
-        
-        Attack(target);
+        _go.Position = newPos;
         return true;
     }
 

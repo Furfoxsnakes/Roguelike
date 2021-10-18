@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1760802386186634779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536627672214883540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4aa664dbbce9d469e5a668d7d65b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1900212901720057737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536627672214883540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223597212f924243b5ef5bbb0fc9ab3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4844351841757396178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536627672214883540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2b305ec74321d40b180b077dcd48b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 1
 --- !u!1001 &6609746007911714255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,8 +44,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[3]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[5]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: -1224410408248958391, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: _data.Array.data[9]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3297401677262422299, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
       propertyPath: m_Name
+      value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392909802607382658, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: Name
       value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 4699960979573108516, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
@@ -61,3 +130,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+--- !u!1 &8536627672214883540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3297401677262422299, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+  m_PrefabInstance: {fileID: 6609746007911714255}
+  m_PrefabAsset: {fileID: 0}

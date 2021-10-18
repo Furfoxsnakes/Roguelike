@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7780222987739129801}
   - component: {fileID: 3392909802607382658}
+  - component: {fileID: -1224410408248958391}
   m_Layer: 0
   m_Name: Actor
   m_TagString: Untagged
@@ -131,7 +132,23 @@ MonoBehaviour:
   _isWalkable: 0
   _isTransparent: 1
   _damageNumberPrefab: {fileID: 2314302950895934017, guid: e37d0138fa023804e909e0c6ff855d88, type: 3}
+  _needsUserInput: 0
+  Name: 
   Awareness: 4
+  Stats: {fileID: -1224410408248958391}
+--- !u!114 &-1224410408248958391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297401677262422299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3066e319cf0d44d58491a13c79072178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &4158096561707045182
 GameObject:
   m_ObjectHideFlags: 0

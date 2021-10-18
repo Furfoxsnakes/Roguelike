@@ -41,34 +41,47 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DamageNumbersPro\Scripts\VelocitySettings.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\FadeSettings.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoManager.cs" />
      <Compile Include="Assets\Scripts\Controller\DungeonController.cs" />
+     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\PerspectiveSettings.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\ShakeSettings.cs" />
      <Compile Include="Assets\Scripts\View Component\DungeonMap.cs" />
-     <Compile Include="Assets\Scripts\Controller\Player.cs" />
+     <Compile Include="Assets\Scripts\Controller\Actors\Player.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\StateMachine.cs" />
-     <Compile Include="Assets\Scripts\Controller\BattleStates\BattleState.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\DamageNumber.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\LerpSettings.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\StepTowardsMoveAction.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Player.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\MoveType.cs" />
+     <Compile Include="Assets\Scripts\Controller\BattleStates\DungeonState.cs" />
      <Compile Include="Assets\Scripts\Common\Notification Center\NotificationExtensions.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\TextSettings.cs" />
      <Compile Include="Assets\Scripts\View Component\MapTile.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\State.cs" />
-     <Compile Include="Assets\Scripts\Controller\Actor.cs" />
-     <Compile Include="Assets\Scripts\Common\Notification Center\NotificationCenter.cs" />
-     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Gold.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoManager.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\FadeSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Player.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\MoveType.cs" />
+     <Compile Include="Assets\Scripts\View Component\Behaviours\MonsterBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Controller\BattleStates\MonsterTurnDungeonState.cs" />
+     <Compile Include="Assets\Scripts\Controller\Actors\Actor.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\MoveTowardsPlayerMoveAction.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\DigitSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\CombinationSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\DamageNumber.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\LerpSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\PerspectiveSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\ShakeSettings.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\TextSettings.cs" />
+     <Compile Include="Assets\Scripts\Controller\BattleStates\PlayerTurnDungeonState.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_SineMover.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Scripts\VelocitySettings.cs" />
+     <Compile Include="Assets\Scripts\Common\Notification Center\NotificationCenter.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\MoveAction.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Scripts\CombinationSettings.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\AttackAction.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Gold.cs" />
+     <Compile Include="Assets\Scripts\View Component\Behaviours\MoveTowardsAndAttackBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\Action.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
+     <Compile Include="Assets\Scripts\View Component\Stats.cs" />
+     <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
+     <Compile Include="Assets\Scripts\Controller\Actors\Monster.cs" />
+     <Compile Include="Assets\Scripts\Controller\Actors\Skeleman.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\GoRogue_2.6.4_MinimalDependencies\GoRogue.xml" />
@@ -346,20 +359,20 @@
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:/Development/Unity/Roguelike/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>C:/Development/Unity/Roguelike/Library/PackageCache/com.unity.cinemachine@2.7.8/Runtime/ThirdParty/clipper_library.dll</HintPath>
+     </Reference>
      <Reference Include="GoRogue">
      <HintPath>C:/Development/Unity/Roguelike/Assets/Addons/GoRogue_2.6.4_MinimalDependencies/GoRogue.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:/Development/Unity/Roguelike/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>C:/Development/Unity/Roguelike/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Priority Queue">
      <HintPath>C:/Development/Unity/Roguelike/Assets/Addons/GoRogue_2.6.4_MinimalDependencies/Priority Queue.dll</HintPath>
-     </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>C:/Development/Unity/Roguelike/Library/PackageCache/com.unity.cinemachine@2.7.8/Runtime/ThirdParty/clipper_library.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>C:/Development/Unity/Roguelike/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -793,6 +806,12 @@
      <Reference Include="Unity.2D.IK.Runtime">
      <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="com.unity.cinemachine.editor">
+     <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.Animation.Triangle.Runtime">
      <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
      </Reference>
@@ -822,12 +841,6 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-     </Reference>
-     <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Cinemachine">
-     <HintPath>C:/Development/Unity/Roguelike/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
