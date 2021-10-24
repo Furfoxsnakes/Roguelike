@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Controller;
 using Enums;
 using GoRogue.MapViews;
 using UnityEngine;
@@ -12,15 +13,17 @@ public class MoveTowardsAndAttackBehaviour : MonsterBehaviour
         Owner.Fov.Calculate(Owner.Position, AggroRange);
         if (!Owner.Fov.CurrentFOV.Contains(Player.Position)) return false;
         
-        var attackAction = GetComponent<AttackAction>();
-
-        if (attackAction != null)
-            if (attackAction.Perform(Player, Owner.Stats[StatTypes.Attack]))
-                return true;
+        // TODO: check for ranged attack component
+        // var attackAction = GetComponent<AttackAction>();
+        //
+        // if (attackAction != null)
+        //     if (attackAction.Perform(Player))
+        //         return true;
         
         var moveAction = GetComponent<MoveAction>();
         if (moveAction == null) return false;
 
-        return moveAction.Perform();
+        var target = moveAction.Perform();
+        return Owner.BumpInto(target);
     }
 }

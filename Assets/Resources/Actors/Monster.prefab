@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223597212f924243b5ef5bbb0fc9ab3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4844351841757396178
+--- !u!114 &3576666881263339368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8536627672214883540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b2b305ec74321d40b180b077dcd48b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d4d4527dd4b4b2bb7d6a2fb537a7b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 1
@@ -75,6 +75,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3297401677262422299, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
       propertyPath: m_Name
+      value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297401677262422299, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}
+      propertyPath: m_TagString
       value: Monster
       objectReference: {fileID: 0}
     - target: {fileID: 3392909802607382658, guid: 4c13db04830cac540b31a9dbc52b5e68, type: 3}

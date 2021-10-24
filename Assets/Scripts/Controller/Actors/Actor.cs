@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Common.Actions;
 using DamageNumbersPro;
 using DG.Tweening;
 using GoRogue;
@@ -61,10 +62,21 @@ public class Actor : MonoBehaviour, IGameObject
         gameObject.transform.DOMove(new Vector3(e.NewPosition.X, e.NewPosition.Y, 0), 0.15f);
     }
 
-    public virtual void Attack(Actor target)
+    public virtual bool BumpInto(IGameObject go)
     {
-        gameObject.transform.DOMove(target.Vector3Pos, 0.075f).From();
-        target.TakeDamage(Random.Range(1,10000));
+        if (go == null) return false;
+        
+        if (go is Actor actor)
+        {
+            var meleeAction = GetComponent<MeleeAttackAction>();
+            if (meleeAction != null)
+            {
+                meleeAction.Perform(actor);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     #region IGameObject

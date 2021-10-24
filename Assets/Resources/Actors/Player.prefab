@@ -33,6 +33,19 @@ MonoBehaviour:
   Name: Player
   Awareness: 3
   Stats: {fileID: 577252779023433154}
+--- !u!114 &-6822644910341596105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386987102754496144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4d4527dd4b4b2bb7d6a2fb537a7b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 1
 --- !u!1001 &7422166796788817803
 PrefabInstance:
   m_ObjectHideFlags: 0

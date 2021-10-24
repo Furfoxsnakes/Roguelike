@@ -1,5 +1,6 @@
 using System;
 using GoRogue;
+using GoRogue.GameFramework;
 using GoRogue.Pathing;
 using UnityEngine;
 
@@ -14,16 +15,21 @@ public class MoveAction : MonoBehaviour
         Owner = GetComponent<Actor>();
     }
 
-    public virtual bool Perform()
+    public virtual IGameObject Perform()
     {
-        if (NewPos == Coord.NONE) return false;
+        if (NewPos == Coord.NONE) return null;
         
         var map = Owner.CurrentMap;
-        if (!map.WalkabilityView[NewPos]) return false;
+        if (!map.WalkabilityView[NewPos])
+        {
+            var target = Owner.CurrentMap.GetObject(NewPos);
+            if (target != null)
+                return target;
+        }
 
         Owner.Position = NewPos;
         NewPos = Coord.NONE;
         
-        return true;
+        return null;
     }
 }

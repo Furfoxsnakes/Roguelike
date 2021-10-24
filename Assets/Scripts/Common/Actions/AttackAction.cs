@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GoRogue;
+using Interfaces;
 using UnityEngine;
 
 [RequireComponent(typeof(Actor))]
@@ -16,14 +17,8 @@ public class AttackAction : MonoBehaviour
         Owner = GetComponent<Actor>();
     }
 
-    public virtual bool Perform(Actor target, int amount)
+    public virtual bool Perform(Actor target)
     {
-        var distanceToTarget = Distance.CHEBYSHEV.Calculate(Owner.Position, target.Position);
-
-        if (distanceToTarget > Range) return false;
-
-        target.TakeDamage(amount);
-        
         return true;
     }
 }

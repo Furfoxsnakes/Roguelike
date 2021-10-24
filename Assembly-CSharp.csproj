@@ -55,7 +55,6 @@
      <Compile Include="Assets\Scripts\Controller\Actors\Skeleman.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\DamageNumber.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\LerpSettings.cs" />
-     <Compile Include="Assets\Scripts\Common\Actions\StepTowardsMoveAction.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Player.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\MoveType.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleStates\DungeonState.cs" />
@@ -79,9 +78,10 @@
      <Compile Include="Assets\Scripts\Common\Actions\AttackAction.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Gold.cs" />
      <Compile Include="Assets\Scripts\View Component\Behaviours\MoveTowardsAndAttackBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Common\Actions\Action.cs" />
      <Compile Include="Assets\Scripts\Controller\Actors\Monster.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
+     <Compile Include="Assets\Scripts\Common\Actions\MeleeAttackAction.cs" />
+     <Compile Include="Assets\Scripts\Interfaces\IBumpAction.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\GoRogue_2.6.4_MinimalDependencies\GoRogue.xml" />

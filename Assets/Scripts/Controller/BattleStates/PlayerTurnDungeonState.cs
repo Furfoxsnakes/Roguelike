@@ -14,12 +14,9 @@ namespace Controller.BattleStates
                 return;
             }
             
-            // try to attack
-            var target = Player.CurrentMap.GetEntity<Actor>(Player.Position + e.Info);
-
-            if (target == null) return;
-            
-            if (Player.GetComponent<AttackAction>().Perform(target, Player.Stats[StatTypes.Attack]))
+            // bump into the target
+            var target = Player.CurrentMap.GetObject(Player.Position + e.Info);
+            if (Player.BumpInto(target))
                 StateMachine.ChangeState<MonsterTurnDungeonState>();
         }
     }
