@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Controller\Actors\Player.cs" />
      <Compile Include="Assets\Scripts\EventArgs\InfoEventArgs.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Controller\Actors\Skeleman.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\DamageNumber.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\LerpSettings.cs" />
      <Compile Include="Assets\Scripts\Common\Actions\StepTowardsMoveAction.cs" />
@@ -60,12 +61,14 @@
      <Compile Include="Assets\Scripts\Controller\BattleStates\DungeonState.cs" />
      <Compile Include="Assets\Scripts\Common\Notification Center\NotificationExtensions.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\TextSettings.cs" />
+     <Compile Include="Assets\Scripts\View Component\Stats.cs" />
      <Compile Include="Assets\Scripts\View Component\MapTile.cs" />
      <Compile Include="Assets\Scripts\Controller\InputController.cs" />
      <Compile Include="Assets\Scripts\Common\State Machine\State.cs" />
      <Compile Include="Assets\Scripts\View Component\Behaviours\MonsterBehaviour.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleStates\MonsterTurnDungeonState.cs" />
      <Compile Include="Assets\Scripts\Controller\Actors\Actor.cs" />
+     <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
      <Compile Include="Assets\Scripts\Common\Actions\MoveTowardsPlayerMoveAction.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\DigitSettings.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleStates\PlayerTurnDungeonState.cs" />
@@ -77,11 +80,8 @@
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_Gold.cs" />
      <Compile Include="Assets\Scripts\View Component\Behaviours\MoveTowardsAndAttackBehaviour.cs" />
      <Compile Include="Assets\Scripts\Common\Actions\Action.cs" />
-     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
-     <Compile Include="Assets\Scripts\View Component\Stats.cs" />
-     <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
      <Compile Include="Assets\Scripts\Controller\Actors\Monster.cs" />
-     <Compile Include="Assets\Scripts\Controller\Actors\Skeleman.cs" />
+     <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\GoRogue_2.6.4_MinimalDependencies\GoRogue.xml" />

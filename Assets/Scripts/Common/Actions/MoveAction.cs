@@ -1,5 +1,6 @@
 using System;
 using GoRogue;
+using GoRogue.Pathing;
 using UnityEngine;
 
 [RequireComponent(typeof(Actor))]

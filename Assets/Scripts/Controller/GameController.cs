@@ -1,16 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using GoRogue;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
     public static GameController Instance => _instance;
     private static GameController _instance;
 
     public CinemachineVirtualCamera Cinemachine => _cinemachine;
     [SerializeField] private CinemachineVirtualCamera _cinemachine;
+
+    private void Awake()
+    {
+        Direction.YIncreasesUpward = true;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +27,5 @@ public class GameController : MonoBehaviour
             DestroyImmediate(this);
 
         DontDestroyOnLoad(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

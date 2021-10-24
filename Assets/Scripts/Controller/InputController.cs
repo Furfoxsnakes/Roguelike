@@ -12,10 +12,11 @@ public class Repeater
     private float _next;
     private bool _hold;
     private string _axis;
+    private KeyCode _key;
 
-    public Repeater(string axisName)
+    public Repeater(KeyCode key)
     {
-        _axis = axisName;
+        _key = key;
     }
 
     public int Update()
@@ -44,17 +45,36 @@ public class Repeater
 
 public class InputController : MonoBehaviour
 {
-    public static event EventHandler<InfoEventArgs<Coord>> MoveEvent;
+    public static event EventHandler<InfoEventArgs<Direction>> MoveEvent;
 
-    private Repeater _hor = new Repeater("Horizontal");
-    private Repeater _ver = new Repeater("Vertical");
+    private Dictionary<KeyCode, Direction> _inputs;
+
+    private void Start()
+    {
+        Direction.YIncreasesUpward = true;
+        _inputs = new Dictionary<KeyCode, Direction>()
+        {
+            {KeyCode.Keypad1, Direction.DOWN_LEFT},
+            {KeyCode.Keypad2, Direction.DOWN},
+            {KeyCode.Keypad3, Direction.DOWN_RIGHT},
+            {KeyCode.Keypad4, Direction.LEFT},
+            {KeyCode.Keypad5, Direction.NONE},
+            {KeyCode.Keypad6, Direction.RIGHT},
+            {KeyCode.Keypad7, Direction.UP_LEFT},
+            {KeyCode.Keypad8, Direction.UP},
+            {KeyCode.Keypad9, Direction.UP_RIGHT}
+        };
+    }
 
     void Update()
     {
-        var x = _hor.Update();
-        var y = _ver.Update();
-        
-        if (x != 0 || y != 0)
-            MoveEvent?.Invoke(this, new InfoEventArgs<Coord>(new Coord(x,y)));
+        foreach (var key in _inputs.Keys)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                MoveEvent?.Invoke(this, new InfoEventArgs<Direction>(_inputs[key]));
+                break;
+            }
+        }
     }
 }

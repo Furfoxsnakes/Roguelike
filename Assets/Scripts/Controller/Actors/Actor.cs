@@ -5,6 +5,7 @@ using DamageNumbersPro;
 using DG.Tweening;
 using GoRogue;
 using GoRogue.GameFramework;
+using GoRogue.Pathing;
 using UnityEngine;
 using View_Component;
 using GameObject = UnityEngine.GameObject;
@@ -26,6 +27,9 @@ public class Actor : MonoBehaviour, IGameObject
     public int Awareness = 4;
     public Stats Stats;
 
+    public AStar Pathing;
+    public FOV Fov;
+
     public Vector3Int Vector3Pos => new Vector3Int(_go.Position.X, _go.Position.Y, 0);
 
     public void Init(Coord pos, Map map)
@@ -33,6 +37,8 @@ public class Actor : MonoBehaviour, IGameObject
         _go = new GoRogue.GameFramework.GameObject(pos, 1, this, isWalkable: _isWalkable, isTransparent: _isTransparent);
         gameObject.transform.position = new Vector3(pos.X, pos.Y, 0);
         map.AddEntity(this);
+        Pathing = new AStar(map.WalkabilityView, Distance.CHEBYSHEV);
+        Fov = new FOV(map.WalkabilityView);
         Moved += OnMoved;
         DungeonMap.FOVWasUpdated += OnFovUpdated;
     }
@@ -43,16 +49,6 @@ public class Actor : MonoBehaviour, IGameObject
             _visuals.SetActive(true);
         else
             _visuals.SetActive(false);
-    }
-
-    public virtual bool TryMove(Coord delta)
-    {
-        var newPos = _go.Position + delta;
-
-        if (!CurrentMap.WalkabilityView[newPos]) return false;
-        
-        _go.Position = newPos;
-        return true;
     }
 
     public virtual void TakeDamage(int amount)

@@ -27,7 +27,7 @@ namespace Controller.BattleStates
             InputController.MoveEvent -= OnMoveEvent;
         }
         
-        protected virtual void OnMoveEvent(object sender, InfoEventArgs<Coord> e)
+        protected virtual void OnMoveEvent(object sender, InfoEventArgs<Direction> e)
         {
             
         }

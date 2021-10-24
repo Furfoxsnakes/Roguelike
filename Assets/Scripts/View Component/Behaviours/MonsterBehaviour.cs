@@ -9,6 +9,7 @@ public class MonsterBehaviour : MonoBehaviour
 {
     protected Actor Owner;
     protected Player Player;
+    [SerializeField] protected int AggroRange = 10;
 
     private void Start()
     {
