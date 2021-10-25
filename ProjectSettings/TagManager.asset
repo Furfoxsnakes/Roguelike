@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Combat Text
     uniqueID: 3703230601
+    locked: 0
+  - name: UI
+    uniqueID: 621151659
     locked: 0

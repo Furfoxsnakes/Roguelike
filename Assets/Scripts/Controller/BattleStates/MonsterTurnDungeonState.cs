@@ -8,6 +8,18 @@ using UnityEngine;
 
 public class MonsterTurnDungeonState : DungeonState
 {
+    public override void Enter()
+    {
+        base.Enter();
+        AnnouncementSystem.ShowMessage("Waiting...");
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        AnnouncementSystem.Hide();
+    }
+
     private void Update()
     {
         Iterator.MoveNext();
