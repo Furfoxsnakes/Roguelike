@@ -45,6 +45,7 @@
      <Compile Include="Assets\DamageNumbersPro\Scripts\FadeSettings.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoManager.cs" />
      <Compile Include="Assets\Scripts\Controller\DungeonController.cs" />
+     <Compile Include="Assets\Scripts\View Component\AnnouncementText.cs" />
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\PerspectiveSettings.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\ShakeSettings.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Scripts\Controller\Actors\Actor.cs" />
      <Compile Include="Assets\Scripts\Enums\StatTypes.cs" />
      <Compile Include="Assets\Scripts\Common\Actions\MoveTowardsPlayerMoveAction.cs" />
+     <Compile Include="Assets\Scripts\Systems\AnnouncementSystem.cs" />
      <Compile Include="Assets\DamageNumbersPro\Scripts\DigitSettings.cs" />
      <Compile Include="Assets\Scripts\Controller\BattleStates\PlayerTurnDungeonState.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_SineMover.cs" />
@@ -83,8 +85,7 @@
      <Compile Include="Assets\Scripts\View Component\Behaviours\MoveTowardsAndAttackBehaviour.cs" />
      <Compile Include="Assets\Scripts\Controller\Actors\Monster.cs" />
      <Compile Include="Assets\DamageNumbersPro\Demo\Script\DNP_DemoCamera.cs" />
-     <Compile Include="Assets\Scripts\View Component\AnnouncementText.cs" />
-     <Compile Include="Assets\Scripts\Systems\AnnouncementSystem.cs" />
+     <Compile Include="Assets\Scripts\Controller\CombatTextController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Addons\GoRogue_2.6.4_MinimalDependencies\GoRogue.xml" />

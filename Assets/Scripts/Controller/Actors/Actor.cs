@@ -52,9 +52,15 @@ public class Actor : MonoBehaviour, IGameObject
             _visuals.SetActive(false);
     }
 
+    /// <summary>
+    /// Displays the floating combat text
+    /// anything 0 and less is considered a miss
+    /// </summary>
+    /// <param name="amount"></param>
     public virtual void TakeDamage(int amount)
     {
-        _damageNumberPrefab.CreateNew(amount, transform.position + new Vector3(0.5f, 0.5f,0));
+        GameController.Instance.DungeonController.DisplayCombatText(amount, Vector3Pos);
+        // _damageNumberPrefab.CreateNew(amount, transform.position + new Vector3(0.5f, 0.5f,0));
     }
 
     protected virtual void OnMoved(object sender, ItemMovedEventArgs<IGameObject> e)

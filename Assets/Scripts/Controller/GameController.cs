@@ -12,8 +12,8 @@ public class GameController : MonoBehaviour
 
     public CinemachineVirtualCamera Cinemachine => _cinemachine;
     [SerializeField] private CinemachineVirtualCamera _cinemachine;
-    public MonsterTurnProgress MonsterTurnProgress;
     public DungeonMap DungeonMap;
+    public DungeonController DungeonController;
 
     private void Awake()
     {
